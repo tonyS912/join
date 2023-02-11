@@ -1,0 +1,396 @@
+.displayflex {
+    display: flex;
+}
+
+.flexcolumn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.flexmid {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.flexaround {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+/* MainCSS */
+.mainside {
+    width: 100%;
+    height: calc(100vh - 100px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: auto;
+}
+
+.mainside::-webkit-scrollbar {
+    width: 5px;
+}
+
+.mainside::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 4px;
+}
+
+.mainside::-webkit-scrollbar-thumb {
+    background: lightgrey;
+    border-radius: 4px;
+}
+
+.mainside::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+/* top */
+.mainmorning {
+    margin-bottom: 40px;
+}
+
+.morning {
+    font-size: 48px;
+    margin: 15px;
+}
+
+.name {
+    font: var(--font-size-xxxlarge) 'Open Sans Bold', sans-serif;
+    color: #4589FF;
+    margin: 15px;
+}
+
+/* middle */
+.tasksurgent {
+    width: 682px;
+    height: 191px;
+    background-color: #4589ff;
+    border-radius: 30px;
+    margin: 15px;
+    transform: scale(1);
+    transition: all 0.125s ease-in-out;
+}
+
+.tasksurgent:hover {
+    cursor: pointer;
+    border-radius: 0px 30px 30px 30px;
+    background-color: #FFFFFF;
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.16);
+    color: #4589FF;
+    transform: scale(1.03);
+    transition: all 0, 125s ease-in-out;
+}
+
+.imgurgent {
+    width: 65px;
+    height: 66px;
+    border-radius: 100%;
+    border: 3px solid #FFFFFF;
+}
+
+.urgenttext,
+.deadlinetext {
+    font: var(--font-size-xxlarge) 'Open Sans', sans-serif;
+    color: #FFFFFF;
+}
+
+.tasksurgent:hover .urgenttext,
+.tasksurgent:hover .deadlinetime,
+.tasksurgent:hover .deadlinetext,
+.tasksurgent:hover .urgentnumber {
+    color: #4589FF;
+}
+
+.deadlinetime {
+    font: bold 33px 'Open Sans', sans-serif;
+    color: #FFFFFF;
+}
+
+.bordermid {
+    height: 145px;
+    width: 3px;
+    background-color: #FFFFFF;
+
+}
+
+.tasksurgent:hover .bordermid {
+    background-color: #4589FF;
+}
+
+.urgentnumber {
+    font: bold var(--font-size-h1) 'Open Sans', sans-serif;
+    color: #FFFFFF;
+    margin-left: 20px;
+}
+
+/* todo */
+.todo,
+.taskbot {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 208px;
+    height: 191px;
+    border-radius: 30px;
+    margin: 15px;
+    transform: scale(1);
+    transition: all 0.125s ease-in-out;
+}
+
+.todo:hover,
+.taskbot:hover {
+    border-radius: 0px 30px 30px 30px;
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.16);
+    transform: scale(1.03);
+    transition: all 0, 125s ease-in-out;
+}
+
+.todo {
+    background-color: var(--color-blue-light);
+}
+
+.todo:hover {
+    background-color: white;
+}
+
+.taskbot {
+    background-color: white;
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.16);
+}
+
+.taskbot:hover {
+    background-color: var(--color-blue-main);
+}
+
+.todonumber {
+    font: bold var(--font-size-h1) 'OpenSans', sans-serif;
+    color: #000000;
+}
+
+.todo:hover .todonumber {
+    color: #005DFF;
+}
+
+.todotext {
+    width: 123px;
+    text-align: center;
+    font: var(--font-size-xxlarge) 'Open Sans', sans-serif;
+    color: #4589FF;
+    line-height: 120%;
+}
+
+.todo:hover .todotext {
+    color: #005DFF;
+}
+
+.tasknumber {
+    font-size: 48px;
+    font-weight: 700;
+    color: #000000;
+}
+
+.taskbot:hover .tasknumber,
+.taskbot:hover .taskettext {
+    color: #FFFFFF;
+}
+
+.taskettext {
+    width: 123px;
+    text-align: center;
+    font: var(--font-size-xxlarge) 'Open Sans', sans-serif;
+    color: #4589FF;
+}
+
+.taskbot:hover .taskimg {
+    border-radius: 100%;
+    border: 3px solid #FFFFFF;
+}
+
+@media (max-width: 1200px) {
+
+    .mainside {
+        justify-content: initial;
+    }
+
+    .mainmorning {
+        margin-top: 40px;
+    }
+
+    .urgent-todo {
+        flex-direction: column;
+    }
+
+    .todo {
+        width: 682px;
+        height: 106px;
+        flex-direction: row;
+        gap: 20px;
+
+    }
+
+    .task-line {
+        width: 682px;
+        gap: 30px;
+        flex-wrap: wrap;
+        margin: 15px 0 30px;
+    }
+
+    .taskbot {
+        width: 326px;
+        margin: 0;
+
+    }
+
+}
+
+@media (max-width: 992px) {
+
+    .mainmorning {
+        flex-direction: column;
+    }
+
+    .mainmorning:first-child {
+        margin-bottom: 16px;
+    }
+
+    .morning {
+        font-size: var(--font-size-xxllarge);
+    }
+
+    .name {
+        font-size: var(--font-size-h1);
+    }
+
+    .tasksurgent,
+    .todo {
+        width: 490px;
+    }
+
+    .imgurgent {
+        width: 56px;
+        height: 56px;
+        object-fit: cover;
+    }
+
+    .urgentnumber,
+    .todonumber {
+        font-size: var(--font-size-xxxllarge);
+    }
+
+    .urgenttext,
+    .todotext {
+        font-size: var(--font-size-regular);
+    }
+
+    .deadlinetime {
+        font-size: var(--font-size-xxlarge);
+    }
+
+    .deadlinetext {
+        font-size: var(--font-size-large);
+    }
+
+    .task-line {
+        width: 490px;
+    }
+
+    .taskbot {
+        width: 230px;
+    }
+
+}
+
+@media (max-width: 768px) {
+
+    .morning,
+    .name {
+        margin: 0;
+    }
+
+}
+
+@media (max-width: 576px) {
+
+    .mainmorning {
+        margin-top: 16px;
+    }
+
+    .morning {
+        font-size: var(--font-size-xxlarge);
+    }
+
+    .name {
+        font-size: var(--font-size-xxllarge);
+    }
+
+    .tasksurgent {
+        width: 400px;
+        display: flex;
+        flex-direction: column;
+        padding: 16px;
+        margin: 15px 15px 30px 15px;
+    }
+
+    .bordermid {
+        width: 145px;
+        height: 3px;
+    }
+
+    .deadlinetext {
+        text-align: center;
+    }
+
+    .todo {
+        width: 400px;
+        height: 106px;
+        display: flex;
+        flex-direction: row;
+        gap: 32px;
+        margin: 0 0 0 15px;
+    }
+
+    .task-line {
+        width: 400px;
+        margin: 30px 0 30px;
+    }
+
+    .taskbot {
+        width: 400px;
+        height: 106px;
+        display: flex;
+        flex-direction: row;
+        gap: 32px;
+    }
+
+    .taskettext {
+        font-size: 18px;
+    }
+
+}
+
+@media (max-width: 456px) {
+
+    .flexaround {
+        gap: 10px;
+    }
+
+    .tasksurgent,
+    .todo,
+    .task-line,
+    .taskbot {
+        width: 284px;
+    }
+
+    .taskbot,
+    .todo {
+        gap: 16px;
+    }
+
+}

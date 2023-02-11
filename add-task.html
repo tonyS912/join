@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./assets/img/logo-dark.png" type="image/png">
+    <title>Add Task | Join</title>
+    <link rel="stylesheet" href="./css/fonts.css">
+    <link rel="stylesheet" href="./css/variables.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/board.css">
+    <link rel="stylesheet" href="./css/add-task.css">
+    <link rel="stylesheet" href="./css/contact.css">
+
+    <script src="./smallest_backend_ever/mini_backend.js"></script>
+    <script src="./js/script.js"></script>
+    <script src="./js/board.js"></script>
+    <script src="./js/add-task.js"></script>
+    <script src="./js/add-task-templates.js"></script>
+    <script src="./js/contacts.js"></script>
+    <script src="./js/contacts-templates.js"></script>
+
+</head>
+
+<body onload="initAddTask()">
+
+    <div class="overlay-header" id="overlay_header">
+        <a href="./summary.html"><img src="./assets/img/logo-blue.png" alt="Join Logo"></a>
+        <div class="rightContainer">
+
+        </div>
+    </div>
+
+    <div class="Mainheader" w3-include-html="./assets/templates/header.html"></div>
+
+    <div class="Main-Container">
+
+        <div class="sidebar" w3-include-html="./assets/templates/navigation.html"></div>
+
+        <div class="main-content add-task-content">
+
+            <form class="addTaskFormHTML" onsubmit="addToTask(0, 'toDo'); return false; ">
+                <div class="input-title">
+                    <input id="AddTitle" type="text" placeholder="Enter a title" autocomplete="off" required>
+                </div>
+
+                <div id="user_selector">
+                    <div class="selector-header" onclick="showUsers()">
+                        Select contacts to assign
+                        <img class="selectorArrow" src="assets/img/blue-dropdown-arrow.png" alt="">
+                    </div>
+                </div>
+
+                <div class="selector-user-dropdown" id="selector_user_dropdown">
+
+                </div>
+
+                <div id="selector_user_dropdown_contact" class="display-flex-in-addtask">
+
+                </div>
+
+                <div class="input border-bottom" style="display:flex; flex-direction: column; align-items:flex-start;">
+                    <h4>Due Date</h4>
+                    <div class="input-date" id="input-date">
+                        <input id="add-date" class="add-date" placeholder="dd/mm/yy" type="date">
+                    </div>
+                </div>
+
+                <h4>Category</h4>
+                <div class="d-none" class="category-alert" id="chooseCategory">This field is required</div>
+                <div id="category_selector">
+                    <div class="selector-header" onclick="showTaskCategories()">
+                        Select task category
+                        <img class="selectorArrow" src="assets/img/blue-dropdown-arrow.png" alt="">
+                    </div>
+                </div>
+
+                <div class="selector-Category-Dropdown" id="selector_Category_Dropdown">
+
+                </div>
+
+                <div class="priorityContainer">
+                    <div class="priority-urgent" onclick="selectedPriority(1)" id="priorityUrgent">
+                        <p>Urgent</p>
+                        <img id="priorityUrgentImg" src="assets/img/prio-urgent.png" alt="">
+                    </div>
+
+                    <div class="priority-medium" id="priorityMedium" onclick="selectedPriority(2)">
+                        <p>Medium</p>
+                        <img id="priorityMediumImg" src="assets/img/prio-medium.png" alt="">
+                    </div>
+
+                    <div class="priority-low" id="priorityLow" onclick="selectedPriority(3)">
+                        <p>Low</p>
+                        <img id="priorityLowImg" src="assets/img/prio-low.png" alt="">
+                    </div>
+                </div>
+
+                <div>
+                    <h4>Description</h4>
+                    <textarea class="add-description" id="AddDescription" placeholder="Enter a Description"></textarea>
+                </div>
+
+                <h4>Subtasks</h4>
+                <div id="empty_subtask_text">
+
+                </div>
+
+                <div class="input-subtasks pointer" id="newSubtask_select">
+                    <div class="inputUser">
+                        <div class="inputfield-new-user">
+                            <input class="input border-bottom" id="new_subtask_text" type="text" placeholder="Add new subtask">
+                            <div class="checkAndCrossIconsCategory">
+                                <img src="./assets/img/blue-cross.png" onclick="clearSubTasks()" class="blue-cross pointer">
+                                <img src="./assets/img/devider.png">
+                                <img src="./assets/img/blue-check.png" onclick="pushSubtasks()" class="blue-check pointer">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="new-Subtasks" id="addSubtaskCheckbox">
+                    </div>
+                </div>
+
+                <div class="addTask-bottom">
+                    <button class="btn clear-button">
+                        <p>Clear</p>
+                        <img src="assets/img/grey-cross.png" alt="">
+                    </button>
+
+                    <button class="btn addTask-button">
+                        <p>Create Task</p>
+                        <img src="assets/img/white-check.png" alt="">
+                    </button>
+                </div>
+            </form>
+            <div id="detail_content"></div>
+            <div id="AddTaskMaskContact" onclick="doNotClose(event)" class="relative d-none"></div>
+        </div>
+    </div>
+
+</body>
+
+</html>

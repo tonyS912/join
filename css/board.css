@@ -1,0 +1,1102 @@
+/* Style for the Mainboard  */
+.main-content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 75px 70px 25px;
+    overflow: hidden;
+}
+
+h1 {
+    font-weight: 700;
+    font-size: 61px;
+}
+
+h3 {
+    margin: 0;
+    font-size: 23px;
+    color: #42526E;
+}
+
+.InputAndButton {
+    display: flex;
+    column-gap: 35px;
+}
+
+.addTaskButton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    width: 138px;
+    height: 51px;
+    background: #4589ff;
+    border: 1px solid #4589ff;
+    border-radius: 10px;
+    color: white;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 21px;
+    line-height: 120%;
+}
+
+.addTaskButton:hover {
+    cursor: pointer;
+    background-color: #005DFF;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.search-input {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    outline: none;
+    padding: 0px;
+    gap: 13px;
+    width: 170px;
+    height: 19px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+}
+
+.input-wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px;
+    gap: 10px;
+    width: 226px;
+    height: 31px;
+}
+
+.search-task-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 51px;
+    width: 251px;
+    border: 1px solid #A8A8A8;
+    border-radius: 10px;
+    padding: 13px 21px;
+    gap: 10px;
+}
+
+.search-icon-wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0px;
+    gap: 15px;
+    width: 43px;
+    height: 31px;
+}
+
+
+.vector {
+    border: 1px solid #D1D1D1;
+    height: 31px;
+}
+
+/* .topBar {} */
+.kanbanBoard {
+    height: calc(100vh - 320px);
+    width: 100%;
+    display: flex;
+    column-gap: 30px;
+    margin: 60px 0 0;
+    padding: 0 5px;
+    overflow: auto;
+}
+
+.drag-area {
+    height: calc(100% - 100px);
+    display: flex;
+    flex-direction: column;
+    row-gap: 30px;
+}
+
+.kanbanBoard::-webkit-scrollbar {
+    width: 5px;
+}
+
+.kanbanBoard::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 4px;
+}
+
+.kanbanBoard::-webkit-scrollbar-thumb {
+    background: lightgrey;
+    border-radius: 4px;
+}
+
+.kanbanBoard::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+.drag-area-Container {
+    width: 25%;
+    position: relative;
+}
+
+.drag-template {
+    min-height: 200px;
+    width: 100%;
+    border-radius: 30px;
+    order: 1;
+}
+
+.drag-template-start {
+    border: 2px dashed rgba(0, 0, 0, 0.5);
+}
+
+.drag-area-top-Section {
+    background-color: white;
+    position: sticky;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 35px;
+    padding: 0 18px;
+    z-index: 5;
+}
+
+
+.drag-area-top-Section img:hover {
+    cursor: pointer;
+}
+
+
+.plusButton {
+    width: 30px;
+    height: 30px;
+}
+
+
+/* Style for the Task-Cards  */
+.todo {
+    width: 100%;
+    position: relative;
+    padding: 18px;
+    box-shadow: 0 0 7px 0 rgba(0, 0, 0, 0.15);
+    border-radius: 30px;
+}
+
+.todo h4 {
+    margin: 25px 0 10px;
+}
+
+
+.todo:hover {
+    cursor: grab;
+}
+
+.task-menu {
+    min-width: 200px;
+    background-color: var(--color-blue-main);
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    padding: 16px;
+    border-radius: 20px 0 20px 20px;
+    color: white;
+    z-index: 95;
+}
+
+.task-menu-close {
+    position: absolute;
+    top: 16px;
+    right: 8px
+}
+
+.task-menu-close img {
+    height: 24px;
+    width: 24px;
+    object-fit: cover;
+}
+
+.task-menu-edit {
+    padding: 0 0 16px 0;
+    border-bottom: 1px solid white;
+}
+
+.task-menu-move {
+    margin: 8px 0 0 0;
+    font-weight: bold;
+}
+
+.task-menu-move-entry {
+    margin: 8px 0;
+    padding: 8px 0;
+}
+
+.task .titleAndText {
+    margin-bottom: 20px;
+}
+
+.title {
+    font-size: 16px;
+    color: #4589ff;
+}
+
+
+.task-progress {
+    display: flex;
+    align-items: center;
+    font-size: 12px;
+    column-gap: 10px;
+    margin: 16px 0;
+}
+
+.progress-bar {
+    width: 100%;
+    max-width: 140px;
+    height: 8px;
+    background: #F4F4F4;
+    border-radius: 8px;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+.progress-bar-fill {
+    transition: all ease-in 225ms;
+    background-color: #4589ff;
+    height: 8px;
+    width: 0%;
+}
+
+.progress-bar-text {
+    color: #42526E;
+}
+
+.UserAndPriority {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.contacts-in-task {
+    display: flex;
+}
+
+.priority {
+    margin-right: 15px;
+}
+
+.orangeCategory {
+    background-color: #FF8A00;
+    border-radius: 5px;
+    padding: 4px 8px;
+    color: white;
+}
+
+.redCategory {
+    background-color: #FF0000;
+    border-radius: 5px;
+    padding: 4px 8px;
+    color: white;
+}
+
+.purpleCategory {
+    background-color: #E200BE;
+    border-radius: 8px;
+    padding: 4px 8px;
+    color: white;
+}
+
+.mintCategory {
+    background-color: #1FD7C1;
+    border-radius: 8px;
+    padding: 4px 8px;
+    color: white;
+}
+
+.greenCategory {
+    background-color: #2AD300;
+    border-radius: 8px;
+    padding: 4px 8px;
+    color: white;
+}
+
+.blueCategory {
+    background-color: #0038FF;
+    border-radius: 8px;
+    padding: 4px 8px;
+    color: white;
+}
+
+.lightblueCategory {
+    background-color: #8AA4FF;
+    border-radius: 8px;
+    padding: 4px 8px;
+    color: white;
+}
+
+.text {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 120%;
+    color: #A8A8A8;
+}
+
+.option-wrapper {
+    background-color: #FFFFFF;
+    width: 422px;
+    height: 150px;
+    z-index: 3;
+    scale: 0;
+}
+
+.user {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 8px 0 0 -8px;
+    width: 40px;
+    height: 40px;
+    border-radius: 46px;
+    border: 1px solid #FFFFFF;
+    color: white;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 120%;
+}
+
+.user:first-child {
+    margin: 8px 0;
+}
+
+/* Style for the onclick Add Task Mask */
+.AddTaskMaskBg {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(211, 211, 211, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+}
+
+.AddTaskMaskContainer {
+    width: 518px;
+    overflow-y: scroll;
+    background-color: white;
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.16);
+    border-radius: 30px 0px 30px 30px;
+    padding: 20px;
+    padding-left: 50px;
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.AddTaskMaskContainer::-webkit-scrollbar {
+    display: none;
+}
+
+.addTaskForm {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    width: 442px;
+}
+
+.addTaskForm h4 {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 19px;
+    line-height: 120%;
+    color: #42526E;
+    margin-top: 5px;
+    margin-bottom: 0px;
+}
+
+.addTaskForm h2 {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 120%;
+    color: #000000;
+    padding-left: 20px;
+}
+
+.addTaskForm button {
+    width: 180px;
+    height: 61px;
+    background-color: var(--color-blue-main);
+    padding: 18px 10px;
+    border: none;
+    border-radius: 10px;
+    font-size: 23px;
+    color: white;
+    cursor: pointer;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+
+.addTask-top {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.priorityContainer {
+    display: flex;
+    gap: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.priority-urgent {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 4px rgb(0 0 0 / 16%);
+    width: 136px;
+    height: 51px;
+    margin-top: 15px;
+}
+
+.priority-urgent:hover {
+    border-bottom: 2px solid #FF3D00;
+    cursor: pointer
+}
+
+.prio-urgent-selected {
+    background-color: #FF3D00;
+    color: white;
+}
+
+.priority-medium {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 18px, 10px, 18px, 10px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 4px rgb(0 0 0 / 16%);
+    width: 136px;
+    height: 51px;
+    margin-top: 15px;
+}
+
+.priority-medium:hover {
+    border-bottom: 2px solid #FFA800;
+    cursor: pointer;
+}
+
+.prio-medium-selected {
+    background-color: #FFA800;
+    color: white;
+}
+
+.priority-low {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 18px, 10px, 18px, 10px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 4px rgb(0 0 0 / 16%);
+    width: 136px;
+    height: 51px;
+    margin-top: 15px;
+}
+
+.priority-low:hover {
+    border-bottom: 2px solid #7AE229;
+    cursor: pointer;
+}
+
+.prio-low-selected {
+    background-color: #7AE229;
+    color: white;
+}
+
+.input-title {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid #D1D1D1;
+    padding: 0 21px 13px;
+}
+
+.input {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    border: none;
+    font-size: 20px;
+    margin-top: 15px;
+    margin-bottom: 0;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+}
+
+.input-title input {
+    border: none;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 120%;
+    width: 100%;
+}
+
+.input-title input:focus {
+    outline: none;
+}
+
+.input-title select {
+    width: 420px;
+    border: none;
+}
+
+.inputfield-new-user {
+    display: flex;
+    border-bottom: 1px solid #D1D1D1;
+    width: 100%;
+    padding: 10px 0px;
+    padding-top: 0;
+}
+
+.input-date {
+    justify-content: center;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 18px 10px;
+    gap: 10px;
+    isolation: isolate;
+    width: 100%;
+    height: 51px;
+    background: #FFFFFF;
+    border-bottom: 1px solid #D1D1D1;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+    background: url(./../assets/img/date.png) center no-repeat;
+    background-size: 28px;
+    cursor: pointer;
+}
+
+.input-date input {
+    border: none;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 19px;
+    width: 100%;
+    height: 23px;
+    font-size: 19px;
+    color: #D1D1D1;
+}
+
+#chooseCategory,
+#alert_message {
+    color: red;
+    text-align: center;
+}
+
+#chossePriority {
+    color: red;
+    text-align: center;
+}
+
+
+.inputfield-new-category {
+    display: flex;
+    border-bottom: 1px solid #D1D1D1;
+    width: 100%;
+    padding: 18px 21px;
+}
+
+.chosen-color {
+    position: relative;
+    bottom: 53px;
+    left: -20px;
+}
+
+.inputUser {
+    width: 100%;
+}
+
+.input-subtasks {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    width: 100%;
+    border: none;
+    outline: none;
+}
+
+.input-subtasks input {
+    border: none;
+    outline: none;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 19px;
+    line-height: 120%;
+    color: #D1D1D1;
+}
+
+.new-Subtasks {
+    width: 100%;
+}
+
+.subtaskList {
+    display: flex;
+    gap: 10px;
+    padding: 5px;
+}
+
+.subtaskList p {
+    font-weight: 100;
+}
+
+
+.add-description {
+    width: 100%;
+    height: 150px;
+    border: 1px solid #D1D1D1;
+    outline: none;
+    border-radius: 0px 10px 10px 10px;
+    padding: 15px;
+    resize: vertical;
+    overflow: hidden;
+    font-size: var(--font-size-xsmall);
+    font-family: inherit;
+}
+
+.CloseCross {
+    width: 21.65px;
+    height: 21.65px;
+    position: absolute;
+    right: 32px;
+    top: 16px;
+}
+
+.CloseCross:hover {
+    cursor: pointer;
+}
+
+.selector-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    border-bottom: 1px solid #D1D1D1;
+    padding: 18px 21px;
+    gap: 10px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 19px;
+    line-height: 120%;
+}
+
+.selector-header:hover {
+    cursor: pointer;
+}
+
+.checkAndCrossIconsCategory {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+}
+
+.selected {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.selectorCell {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 18px 21px;
+}
+
+.selectorCell:hover {
+    background-color: #D2E3FF;
+}
+
+.task-added-to-board {
+    z-index: 96;
+    translate: -50%;
+}
+
+/* Style for the onclick Detail Container */
+.DetailContainer {
+    z-index: 100;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(211, 211, 211, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Detail {
+    width: 623px;
+    height: 80vh;
+    background-color: white;
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.16);
+    border-radius: 30px;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    overflow: auto;
+}
+
+
+.Detail::-webkit-scrollbar {
+    display: none;
+}
+
+.detail-category {
+    width: 200px;
+}
+
+.detail-title {
+    margin: 0;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 61px;
+    line-height: 120%;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+.detail-text {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 21px;
+    line-height: 120%;
+    color: black;
+}
+
+.detail-dueDate {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 21px;
+    line-height: 120%;
+}
+
+.detail-dueDate p {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 21px;
+    line-height: 120%;
+}
+
+.detail-priority {
+    display: flex;
+    align-items: center;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 21px;
+    line-height: 120%;
+    gap: 20px;
+}
+
+.detail-assignedTo {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 21px;
+    line-height: 120%;
+}
+
+.detail-assignedTo p {
+    display: flex;
+    flex-direction: column;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 21px;
+    line-height: 120%;
+}
+
+.crossed-out {
+    text-decoration: line-through;
+}
+
+.detail-subTasks p {
+    margin: 0;
+}
+
+.detail-subTasks {
+    display: flex;
+    flex-direction: column;
+    font-style: normal;
+    gap: 5px;
+    padding-top: 15px;
+    padding-left: 5px;
+}
+
+.CloseCross-DetailTask {
+    width: 21.65px;
+    height: 21.65px;
+    position: absolute;
+    right: 42px;
+    top: 42px;
+}
+
+.CloseCrossDetailTask:hover {
+    cursor: pointer;
+}
+
+.DetailTitle {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 61px;
+    line-height: 120%;
+}
+
+.Detail form {
+    width: 412px;
+}
+
+.Detail form h5 {
+    font-weight: 700;
+    font-size: 25px;
+    line-height: 120%;
+    color: #000000;
+}
+
+.Detail form h4 {
+    margin-bottom: 5px;
+    font-weight: 700;
+    font-size: 21px;
+    line-height: 120%;
+    color: #42526E;
+}
+
+.edit-button {
+    position: absolute;
+    bottom: 24px;
+    right: 41px;
+}
+
+.task-edit-btns {
+    position: absolute;
+    bottom: 32px;
+    right: 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.trash-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 86px;
+    height: 61px;
+}
+
+.trash {
+    width: 25px;
+    height: 25px;
+}
+
+.ok {
+    width: 86px;
+    height: 61px;
+    font-size: 23px;
+}
+
+.detailforcontactintask {
+    display: flex;
+    align-items: center;
+    margin: 5px;
+    gap: 20px;
+}
+
+.d-none {
+    display: none;
+}
+
+.add-date {
+    outline: none;
+}
+
+.add-date:hover {
+    cursor: pointer;
+}
+
+
+@media (max-width: 1140px) {
+    .kanbanBoard {
+        flex-wrap: wrap;
+    }
+
+    .drag-area-Container {
+        width: calc(50% - 15px);
+        margin-bottom: 30px;
+    }
+
+    .drag-area-top-Section {
+        position: unset;
+    }
+
+}
+
+@media (max-width: 992px) {
+
+    .main-content {
+        padding: 75px 16px 25px;
+    }
+
+}
+
+@media (max-width: 768px) {
+
+    .Detail {
+        width: 80vw;
+    }
+
+    .Detail form {
+        width: 100%;
+    }
+
+    .task-edit-btns {
+        position: initial;
+        flex-direction: row;
+        margin-top: 32px;
+    }
+
+    .task-menu-edit {
+        padding: 0 0 8px 0;
+    }
+
+    .task-menu-move-entry {
+        margin: 4px 0;
+        padding: 4px 0;
+    }
+
+}
+
+@media (max-width: 576px) {
+
+    .main-content {
+        padding: 25px 16px 16px;
+    }
+
+    .kanbanBoard {
+        height: 100%;
+        margin: 16px 0;
+    }
+
+    .drag-area-top-Section {
+        margin-bottom: 16px;
+    }
+
+    .drag-area-Container {
+        width: 100%;
+    }
+
+    .Detail {
+        width: 90vw;
+        padding: 32px 32px;
+    }
+
+    .CloseCross-DetailTask {
+        top: 26px;
+        right: 26px;
+    }
+
+    .AddTaskMaskContainer {
+        width: 100%;
+        align-items: center;
+        padding: 32px;
+        border-radius: 0;
+    }
+
+    .addTaskForm {
+        width: 100%;
+    }
+
+    .addTask-top {
+        position: relative;
+        padding-top: 32px;
+    }
+
+    .addTaskForm button {
+        position: fixed;
+        top: 16px;
+
+    }
+
+}
+
+@media (max-width: 456px) {
+
+    .addTaskButton {
+        display: none;
+    }
+
+    .InputAndButton {
+        flex-direction: column;
+        row-gap: 16px;
+    }
+
+    .Detail h5 {
+        margin: 20px 0;
+    }
+
+    .detail-title {
+        font-size: 40px;
+    }
+
+    .detail-text {
+        font-size: 18px;
+    }
+
+    .detail-assignedTo {
+        font-size: 18px;
+    }
+
+    .detail-dueDate p {
+        font-size: 18px;
+    }
+
+    .priorityContainer {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .user {
+        height: 39px;
+        width: 39px;
+    }
+
+    .task-added-to-board {
+        width: 288px;
+        object-fit: cover;
+    }
+
+}

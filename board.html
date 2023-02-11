@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./assets/img/logo-dark.png" type="image/png">
+    <title>Board | Join</title>
+    <link rel="stylesheet" href="./css/fonts.css">
+    <link rel="stylesheet" href="./css/variables.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/board.css">
+    <link rel="stylesheet" href="./css/add-task.css">
+    <link rel="stylesheet" href="./css/animations.css">
+    <link rel="stylesheet" href="./css/contact.css">
+
+
+    <script src="./smallest_backend_ever/mini_backend.js"></script>
+    <script src="./js/script.js"></script>
+    <script src="./js/add-task-templates.js"></script>
+    <script src="./js/add-task.js"></script>
+    <script src="./js/board.js"></script>
+    <script src="./js/board-templates.js"></script>
+    <script src="./js/contacts.js"></script>
+    <script src="./js/contacts-templates.js"></script>
+</head>
+
+<body onload="initBoard();">
+
+    <div id="detail_container" class="DetailContainer d-none animationFadeInBottom " onclick="closeDetailTask()">
+
+    </div>
+
+    <img id="task_added_to_board_img" class="task-added-to-board animationFadeInBottom d-none" src="./assets/img/task-added-to-board.png" alt="">
+    <div id="AddTaskMaskBg" class="AddTaskMaskBg d-none" onclick="hideAddTaskMask()">
+        <div id="AddTaskMaskContainer" class="AddTaskMaskContainer animationFadeInRight d-none " onclick="doNotClose(event)"></div>
+        <div id="AddTaskMaskContact" onclick="doNotClose(event)"></div>
+        <div id="detail_content" class="Detail d-none" onclick="doNotClose(event)"></div>
+    </div>
+
+    <div class="Mainheader" w3-include-html="./assets/templates/header.html"></div>
+
+    <div class="Main-Container">
+
+        <div class="sidebar" w3-include-html="./assets/templates/navigation.html"></div>
+
+        <div class="main-content">
+
+            <div class="topBar">
+                <div class="InputAndButton">
+                    <div class="search-task-container">
+                        <div class="input-wrapper">
+                            <input class="search-input" id="search_input" type="text" placeholder="Find Task" onkeyup="handleFilterTasks()">
+                            <div class="search-icon-wrapper">
+                                <div class="vector"></div>
+                                <img src="assets/img/searchglas.png">
+                            </div>
+                        </div>
+                    </div>
+                    <button onclick="openAddTaskMask(1, 'toDo')" class="addTaskButton">
+                        <p>Add Task</p> <img src="assets/img/white-plus.png" alt="">
+                    </button>
+                </div>
+            </div>
+
+            <div class="kanbanBoard">
+                <div class="drag-area-Container" id="toDo-Container">
+                    <div class="drag-area-top-Section">
+                        <h3>To do</h3> <img onclick="openAddTaskMask(1, 'toDo');" class="plusButton" src="assets/img/plus button v1.png" alt="">
+                    </div>
+
+                    <div class="drag-area" id="toDo" ondrop="moveTo('toDo')" ondragover="allowDrop(event)" ondrop="drop(event)">
+                    </div>
+                </div>
+
+                <div class="drag-area-Container" id="inProgress-Container">
+                    <div class="drag-area-top-Section">
+                        <h3>In progress</h3><img onclick="openAddTaskMask(1, 'inProgress')" class="plusButton" src="assets/img/plus button v1.png" alt="">
+                    </div>
+
+                    <div class="drag-area" id="inProgress" ondrop="moveTo('inProgress')" ondragover="allowDrop(event)" ondrop="drop(event)">
+                    </div>
+                </div>
+
+                <div class="drag-area-Container" id="awaitingFeedback-Container">
+                    <div class="drag-area-top-Section">
+                        <h3>Awaiting Feedback</h3><img onclick="openAddTaskMask(1, 'awaitingFeedback')" class="plusButton" src="assets/img/plus button v1.png" alt="">
+                    </div>
+
+                    <div class="drag-area" id="awaitingFeedback" ondrop="moveTo('awaitingFeedback')" ondragover="allowDrop(event)" ondrop="drop(event)"></div>
+                </div>
+
+                <div class="drag-area-Container" id="done-Container">
+                    <div class="drag-area-top-Section">
+                        <h3>Done</h3><img onclick="openAddTaskMask(1, 'done')" class="plusButton" src="assets/img/plus button v1.png" alt="">
+                    </div>
+
+                    <div class="drag-area" id="done" ondrop="moveTo('done')" ondragover="allowDrop(event)" ondrop="drop(event)"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+
+</html>

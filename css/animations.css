@@ -1,0 +1,186 @@
+.start-overlay {
+    background-color: var(--color-blue-main);
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top: -64px;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: start-overlay-animation 1.5s ease-in-out both;
+}
+
+@keyframes start-overlay-animation {
+    0% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 0;
+        z-index: -1;
+    }
+}
+
+.start-logo {
+    width: 265px;
+    height: 324px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    animation: start-logo-animation 0.8s ease-in-out both;
+}
+
+@keyframes start-logo-animation {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        width: 101px;
+        height: 122px;
+        top: 80px;
+        left: 80px;
+        opacity: 0.5;
+    }
+}
+
+.animationFadeInRight {
+    animation: fadeInright 0.5s ease 0s 1 normal forwards;
+}
+
+@keyframes fadeInright {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+
+    0% {
+        transform: translateX(100%);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+.animationFadeInBottom {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    animation: fadeInBottom 0.2s ease-in-out 0s 1 normal forwards;
+}
+
+@keyframes fadeInBottom {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+
+    0% {
+        transform: translateY(100%);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.animationFadeIncontactBottom {
+    animation: fadeIncontactBottom 1s ease 0s 1 normal forwards;
+}
+
+@keyframes fadeIncontactBottom {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+
+    0% {
+        transform: translateY(100%);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.animationFadeoutBottom {
+    animation: fadeoutBottom 1s ease 0s 1 normal forwards;
+}
+
+@keyframes fadeoutBottom {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+
+    0% {
+        transform: translateY(0);
+    }
+
+    100% {
+        transform: translateY(100%);
+    }
+}
+
+.animationFadeIn {
+    animation: fadeIn 1s ease 0s 1 normal forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+
+    0% {
+        transform: translateX(-100%);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+.animationFadeInRight {
+    animation: fadeInright 1s ease 0s 1 normal forwards;
+}
+
+@keyframes fadeInright {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+
+    0% {
+        transform: translateX(100%);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}

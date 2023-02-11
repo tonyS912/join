@@ -1,0 +1,193 @@
+.overlay-header {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 80px;
+    background-color: white;
+}
+
+.overlay-header img {
+    padding: 10px 0 5px 10px;
+}
+
+.add-task-content {
+    height: calc(100vh - 100px);
+}
+
+.addTaskFormHTML {
+    height: calc(100vh - 100px);
+    width: 430px;
+    position: relative;
+    padding-right: 16px;
+    overflow: auto;
+}
+
+.addTaskFormHTML::-webkit-scrollbar {
+    width: 5px;
+}
+
+.addTaskFormHTML::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 4px;
+}
+
+.addTaskFormHTML::-webkit-scrollbar-thumb {
+    background: lightgrey;
+    border-radius: 4px;
+}
+
+.addTaskFormHTML::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+.addTaskFormHTML h4 {
+    margin-bottom: 10px;
+    margin-top: 15px;
+}
+
+
+.addTask-bottom {
+    position: fixed;
+    bottom: 75px;
+    left: 750px;
+    display: flex;
+    gap: 20px;
+}
+
+.clear-button {
+    width: 110px;
+    height: 60px;
+    background: #FFFFFF;
+    border: 1px solid #647188;
+    border-radius: 10px;
+    color: #647188;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.addTask-button {
+    width: 183px;
+    height: 60px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 23px;
+    line-height: 120%;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.leftcontainer {
+    overflow: hidden;
+    width: 422px;
+    padding-top: 20px;
+}
+
+.right-container {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    position: fixed;
+    right: 0;
+    bottom: 0;
+}
+
+.subtasks {
+    display: flex;
+    align-items: center;
+    column-gap: 8px;
+    padding: 5px;
+}
+
+.subtasks-trash {
+    width: 20px;
+    height: 20px;
+    object-fit: cover;
+    cursor: pointer;
+}
+
+.display-flex-in-addtask {
+    display: flex;
+}
+
+@media (max-width: 1140px) {
+
+    .addTask-bottom {
+        flex-direction: column;
+    }
+
+    .clear-button {
+        width: 183px;
+        display: flex;
+        justify-content: center;
+    }
+
+}
+
+@media (max-width: 992px) {
+
+    .add-task-content {
+        align-items: center;
+    }
+
+    .addTask-bottom {
+        width: 100%;
+        position: initial;
+        flex-direction: row;
+        justify-content: flex-end;
+        margin-top: 28px;
+    }
+
+    .clear-button {
+        width: 110px;
+    }
+
+}
+
+@media (max-width: 768px) {
+
+    .overlay-header {
+        display: flex;
+        align-items: center;
+    }
+
+    .addTask-bottom {
+        height: 80px;
+        position: fixed;
+        top: 0;
+        left: 0;
+        align-items: center;
+        margin: 0;
+        padding-right: 32px;
+    }
+
+}
+
+@media (max-width: 456px) {
+
+    .addTaskFormHTML {
+        width: 100%;
+    }
+
+    .addTask-bottom {
+        gap: 8px;
+        padding-right: 16px;
+    }
+
+    .clear-button {
+        display: none;
+    }
+
+    .addTask-button {
+        width: 170px;
+        height: 50px;
+        gap: 5px;
+        padding: 4px 12px;
+    }
+
+}
