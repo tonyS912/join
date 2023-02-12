@@ -110,7 +110,7 @@ function addNewContactHtml(mo) {
                 </div>
                 <div  id="emailDone" class="d-none contact-email-done">This Email already exists</div>
                 <div class="input-contact">
-                    <input placeholder="  Phone" required type="text" id="contactNumber" class="input-contact-name">
+                    <input placeholder="  Phone" required type="tel" id="contactNumber" class="input-contact-name" pattern="[0-9]({3}) [0-9]{3}-[0-9]{4}">
                     <img src="./assets/img/phone.png" alt="">
                 </div>
             </div>
@@ -160,7 +160,7 @@ function editContactHtml(contact, lettersFB, index) {
                                 <img src="./assets/img/login-email.png" alt="">
                             </div>
                             <div class="input-contact">
-                                <input required type="text" id="contactEditNumber" class="input-contact-name">
+                                <input required type="tel" id="contactEditNumber" class="input-contact-name" pattern="[0-9]({3}) [0-9]{3}-[0-9]{4}">
                                 <img src="./assets/img/phone.png" alt="">
                             </div>
                         </div>

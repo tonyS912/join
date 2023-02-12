@@ -97,7 +97,7 @@
     background-color: white;
     border-radius: 0px 30px 30px 0px;
     box-shadow: 0px 0px 4px rgb(0 0 0 / 16%);
-    overflow: auto;
+    overflow: hidden;
 }
 
 .add-contact-head {
@@ -240,7 +240,7 @@
     display: flex;
     align-items: center;
     padding-left: 20px;
-
+    overflow-x: hidden;
     height: 77px;
 }
 
@@ -260,7 +260,7 @@
     justify-content: center;
     align-items: center;
     color: #ffffff;
-    width: 42px;
+    min-width: 42px;
     height: 42px;
     border-radius: 100%;
     margin-right: 16px;
@@ -497,7 +497,7 @@
     }
 
     .contact-main {
-        height: calc(100vh - 150px);
+        height: calc(100vh - 132px);
         overflow: hidden;
     }
 
@@ -568,6 +568,7 @@
 
     .contact-main {
         min-width: 288px;
+        height: calc(100vh - 137px);
     }
 
     .contact-bar {
