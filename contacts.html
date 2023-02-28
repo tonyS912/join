@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./assets/img/logo-dark.png" type="image/png">
+    <title>Contacts | Join</title>
+    <link rel="stylesheet" href="./css/fonts.css">
+    <link rel="stylesheet" href="./css/variables.css">
+    <link rel="stylesheet" href="./css/animations.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/contact.css">
+    <link rel="stylesheet" href="./css/add-task.css">
+    <link rel="stylesheet" href="./css/board.css">
+    <script src="./smallest_backend_ever/mini_backend.js"></script>
+    <script src="./js/script.js"></script>
+    <script src="./js/board.js"></script>
+    <script src="./js/add-task.js"></script>
+    <script src="./js/contacts-templates.js"></script>
+    <script src="./js/contacts.js"></script>
+    <script src="./js/add-task-templates.js"></script>
+    <script src="./js/board-templates.js"></script>
+</head>
+
+<body onload="initContacts()" class="overflow-hidden">
+    <div class="Mainheader" w3-include-html="./assets/templates/header.html"></div>
+    <div class="display">
+        <div class="sidebar" w3-include-html="./assets/templates/navigation.html"></div>
+        <div class="contact-main">
+
+            <div id="contactbar" class="contact-bar">
+            </div>
+            <div id="contact-detail-in-main" class="display-contact-none"></div>
+        </div>
+        <div class="contact-right-side">
+            <div class="show-contact">
+                <div id="contactdetails">
+
+                </div>
+            </div>
+
+        </div>
+        <div class="show-button">
+            <div class="new-contact-button" onclick="openAddContact(0)">New contact <img class="new-contact-button-img" src="./assets/img/contact-member.png" alt=""></div>
+        </div>
+    </div>
+    <div class="relative d-none" id="opencontact" onclick="hideAddContacts()"></div>
+    <div class="AddTaskMaskBg d-none" id="openContactAddtaskBG">
+        <div class="AddTaskMaskContainer" id="openContactAddtask"></div>
+    </div>
+    <div id="popup-ContactBar" class="popup-contact-create animationFadeIncontactBottom d-none  ">
+        <img src="./assets/img/Frame 73.png" alt="">
+    </div>
+</body>
+
+</html>
