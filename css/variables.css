@@ -1,0 +1,18 @@
+:root {
+    --font-size-xsmall: 14px;
+    --font-size-small: 16px;
+    --font-size-regular: 18px;
+    --font-size-large: 20px;
+    --font-size-xlarge: 22px;
+    --font-size-xxlarge: 24px;
+    --font-size-xxllarge: 32px;
+    --font-size-xxxllarge: 40px;
+    --font-size-xxxlarge: 64px;
+    --font-size-h1: 48px;
+
+    --color-blue-main: #4589ff;
+    --color-blue-main-hover: #005dff;
+    --color-blue-light: #d2e3ff;
+
+    --border: 1px solid rgba(0, 0, 0, 0.1);
+}
