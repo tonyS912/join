@@ -4,7 +4,7 @@
 
 $recipient = $_POST['email'];
 $timestamp = time();
-$link = "https://tony-schiller.developerakademie.net/reset-password.html?email=" . $recipient . "&timestamp=" . $timestamp;
+$link = "https://tony-schiller.com/reset-password.html?email=" . $recipient . "&timestamp=" . $timestamp;
 $message = "Hello, \r\n
 you can reset your password by clicking on the link below: \r\n
 $link \r\n
@@ -48,7 +48,7 @@ switch ($_SERVER['REQUEST_METHOD']) {
         header("Access-Control-Allow-Origin: *");
 
         $subject = "Password reset Join Kanban Board";
-        $headers = "From:  noreply@developerakademie.com";
+        $headers = "From:  info@tony-schiller.com";
 
         mail($recipient, $subject, $message, $headers);
         header("Location: " . $redirect); 

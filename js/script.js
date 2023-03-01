@@ -1,4 +1,4 @@
-setURL('https://tony-schiller.developerakademie.net/smallest_backend_ever');
+setURL('https://tony-schiller.com/smallest_backend_ever');
 let currentUserEmail = localStorage.getItem('userLoggedInEmail');
 let users = [];
 let currentUser;
