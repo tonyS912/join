@@ -1,7 +1,7 @@
 function openAddTaskHtml(i, taskStatus) {
   return /*html*/`
   <form class="addTaskForm" onsubmit="addToTask(${i}, '${taskStatus}'); return false; ">
-    <img class="CloseCross" onclick="closeAddTaskMask(${i})" src="assets/img/group 11.png" alt="">
+    <img class="CloseCross" onclick="closeAddTaskMask(${i})" src="/assets/img/Group 11.png" alt="">
     <div class="addTask-top">
       <h2>Add Task</h2>
       <button class="btn">Create Task <img src="assets/img/white-check.png" alt=""></button>

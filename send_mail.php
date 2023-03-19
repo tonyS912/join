@@ -4,7 +4,7 @@
 
 $recipient = $_POST['email'];
 $timestamp = time();
-$link = "https://tony-schiller.com/reset-password.html?email=" . $recipient . "&timestamp=" . $timestamp;
+$link = "https://join.tony-schiller.com/reset-password.html?email=" . $recipient . "&timestamp=" . $timestamp;
 $message = "Hello, \r\n
 you can reset your password by clicking on the link below: \r\n
 $link \r\n

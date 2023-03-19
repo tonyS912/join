@@ -78,7 +78,7 @@ function touchMenuEntryHTML(element, currentTaskState, i) {
  */
 function detailContentTemplate() {
     return /*html*/`
-        <img class="CloseCross-DetailTask pointer" onclick="hideAddTaskMask()" src="assets/img/group 11.png" alt="">
+        <img class="CloseCross-DetailTask pointer" onclick="hideAddTaskMask()" src="/assets/img/Group 11.png" alt="">
         <div class="detail-category ${currentTask.category.TaskColor}">
             ${currentTask.category.Category}
         </div>
@@ -115,7 +115,7 @@ function detailContentTemplate() {
 function changeTaskTemplate(id) {
     return /*html*/`
         <form onsubmit="saveChangedTask(${currentTask.id}); return false;" class="editTask">
-            <img class="CloseCross-DetailTask pointer" onclick="hideAddTaskMask()" src="assets/img/group 11.png" alt="">
+            <img class="CloseCross-DetailTask pointer" onclick="hideAddTaskMask()" src="/assets/img/Group 11.png" alt="">
         
             <div class="input-title">
                 <input id="changed_title" type="text" value="${currentTask.title}" autocomplete="off" required>
